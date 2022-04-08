@@ -1,4 +1,5 @@
 # parallaxLCD
+<<<<<<< HEAD
 
 This is a Python library to control Parallax 4 x 20 Serial LCD (3 wires).
 
@@ -7,3 +8,5 @@ The Parallax Serial LCDs (liquid crystal displays) can be easily connected to an
 This model features 4 rows of 20 black characters a green backlit field. It is also available in two 2 x 16 models.
 
 https://www.parallax.com/product/parallax-4-x-20-serial-lcd-with-piezospeaker-backlit/
+=======
+>>>>>>> 39b848e (first commit)
