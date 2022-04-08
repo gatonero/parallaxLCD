@@ -1,8 +1,7 @@
+import machine
+import gc
 from time import sleep
 
-import machine
-
-import gc
 gc.enable
 
 LCD_UART = 2
