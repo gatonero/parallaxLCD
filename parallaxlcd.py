@@ -122,15 +122,12 @@ class CharLCD:
             for i in range(len(text)):
                 self.cursorLeft()
 
-            #dir = dir[]
-            print(dir)
-            if dir in['L', 'l']:
+           
+            if dir[0] in ['l', 'L']:
                 self.cursorLeft()
-                print('Left')
             else:
                 self.cursorRight()
-                print('Right')
-
+ 
             self.print(text)
 
     def cursorLineFeed(self):
@@ -157,7 +154,7 @@ class CharLCD:
         self.cursorPos(eraseROW, eraseCOL)
         self.print(eraseOLD)
 
-        lineCenter = LCD_ROW_MAX/2
+        lineCenter = LCD_ROW_MAX//2
         messageCenterROW = LCD_ROW_MAX//2
         messageCenterCOL = LCD_COL_MAX//2 - len(message)//2
 
@@ -169,7 +166,6 @@ class CharLCD:
         eraseCOL = messageCenterCOL
         
     def cursorPos(self, LCD_ROW, LCD_COL):
-        #print('*** In cursorPos: ', LCD_ROW, LCD_COL)
         if LCD_ROW < LCD_ROW_MIN:
             LCD_ROW = LCD_ROW_MIN
         if LCD_ROW > LCD_ROW_MAX:
@@ -179,15 +175,9 @@ class CharLCD:
         if LCD_COL > LCD_COL_MAX:
             LCD_COL = LCD_COL_MAX
 
-        #print('ROW', LCD_ROW)
-        #print('COL', LCD_COL)
-
-        #print('*** Gewuenschte Position: ', LCD_ROW, LCD_COL)
         searchPOS = [LCD_ROW, LCD_COL]
-        #print('*** SuchPosition: ', searchPOS)
         if searchPOS in LCD_POS_LIST:
             searchINDEX = LCD_POS_LIST.index([LCD_ROW, LCD_COL])
-            #print('*** SuchIndex: ', searchINDEX)
         else:
             print('Not found')
 

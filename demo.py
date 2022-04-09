@@ -8,21 +8,21 @@ from parallaxlcd import CharLCD
 # Initialize the LCD
 lcd = CharLCD()
 
-# # Show the no cursor
+# Show the no cursor
 lcd.clear()
 lcd.cursorOff()
 lcd.print('No Cursor: ')
 sleep(3)
 
-# # Show no cursor but blinking block
+# Show no cursor but blinking block
 lcd.clear()
 lcd.noCursorBlock()
-lcd.print('No Cursor: ')
+lcd.print('No Cursor')
 lcd.carriageReturn()
 lcd.print('but blinking block: ')
 sleep(3)
 
-# # Show the underline cursor
+# Show the underline cursor
 lcd.clear()
 lcd.cursorUnderline()
 lcd.print('Underline: ')
@@ -36,26 +36,27 @@ lcd.carriageReturn()
 lcd.print('blinking block: ')
 sleep(3)
 
-# # Disable blink and underline cursor.
+# Disable blink and underline cursor.
 lcd.cursorOff()
 
 # Scroll message right & left
 lcd.clear()
-lcd.move('Moving right>', 5, 'R')
+lcd.move('Moving right>', 3, 'R')
 lcd.clear()
-lcd.move('<Moving left', 8, 'l')
+lcd.move('<Moving left', 8, 'L')
 lcd.clear()
-lcd.move('Moving default', 5)
+lcd.move('Moving default', 3)
 
 # Print centered messages with different length
+lcd.clear()
 lcd.printCenter('0')
-sleep(2)
+sleep(0.5)
 lcd.printCenter('01')
-sleep(2)
+sleep(0.5)
 lcd.printCenter('012')
-sleep(2)
+sleep(0.5)
 lcd.printCenter('0123')
-sleep(2)
+sleep(0.5)
 lcd.printCenter('01234')
 sleep(0.5)
 lcd.printCenter('012345')
@@ -70,11 +71,9 @@ lcd.printCenter('01')
 sleep(0.5)
 lcd.printCenter('0')
 sleep(0.5)
-lcd.clear
+lcd.clear()
 
 
 # The End
-
-
-print('Ende')
+lcd.printCenter('Ende')
 
