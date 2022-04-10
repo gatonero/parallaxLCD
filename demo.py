@@ -17,9 +17,8 @@ sleep(3)
 # Show no cursor but blinking block
 lcd.clear()
 lcd.noCursorBlock()
-lcd.print('No Cursor')
-lcd.carriageReturn()
-lcd.print('but blinking block: ')
+lcd.print('No Cursor: ', 0, 0)
+lcd.print('but blinking block: ', 1, 0)
 sleep(3)
 
 # Show the underline cursor
@@ -31,36 +30,27 @@ sleep(3)
 # Show the underline cursor + blinking block
 lcd.clear()
 lcd.cursorBlockBlink()
-lcd.print('Underline +')
-lcd.carriageReturn()
-lcd.print('blinking block: ')
+lcd.print('Underline +', 0, 0)
+lcd.print('blinking block: ', 1, 0)
 sleep(3)
 
 # Disable blink and underline cursor.
 lcd.cursorOff()
 
-# Scroll message right & left
-lcd.clear()
-lcd.move('Moving right>', 3, 'R')
-lcd.clear()
-lcd.move('<Moving left', 8, 'L')
-lcd.clear()
-lcd.move('Moving default', 3)
-
 # Print centered messages with different length
 lcd.clear()
 lcd.printCenter('0')
-sleep(0.5)
+sleep(2)
 lcd.printCenter('01')
-sleep(0.5)
+sleep(2)
 lcd.printCenter('012')
-sleep(0.5)
+sleep(2)
 lcd.printCenter('0123')
-sleep(0.5)
+sleep(2)
 lcd.printCenter('01234')
 sleep(0.5)
-lcd.printCenter('012345')
-sleep(0.5)
+lcd.printCenter('01234567890123456789')
+sleep(2)
 lcd.printCenter('01234')
 sleep(0.5)
 lcd.printCenter('0123')
@@ -71,9 +61,16 @@ lcd.printCenter('01')
 sleep(0.5)
 lcd.printCenter('0')
 sleep(0.5)
-lcd.clear()
+lcd.clear
+
+# Scroll message right & left
+# lcd.clear()
+# lcd.move('Moving right>', 3, 'R')
+# lcd.clear()
+# lcd.move('<Moving left', 3, 'l')
+# lcd.clear()
+# lcd.move('Moving default', 3)
 
 
 # The End
-lcd.printCenter('Ende')
-
+lcd.printCenter('*** Ende ***')
